@@ -4,6 +4,8 @@
         <title>HTML Cheat Sheet</title>
     </head>
     <body>
+        <a href="blog.html">Go to blog</a>
+        <hr>
         <!-- Headings -->
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -13,10 +15,151 @@
         <h6>Heading 6</h6>
         <!-- Paragraph -->
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam tempora nemo sit numquam praesentium ut, rerum impedit quasi, sequi nisi sed cum harum. Explicabo porro, quae magnam asperiores delectus nemo?
+            Lorem ipsum dolor sit amet consectetur, <strong>elit. Quibusdam tempora nemo sit numquam</strong>  praesentium ut, rerum impedit quasi, <em>nisi sed cum harum. Explicabo porro, quae magnam</em>  asperiores delectus nemo?
         </p>
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam tempora nemo sit numquam praesentium ut, rerum impedit quasi, sequi nisi sed cum harum. Explicabo porro, quae magnam asperiores delectus nemo?
+            <a href="http://bing.com" target="_blank">Lorem ipsum dolor sit amet consectetur</a>, adipisicing elit. Quibusdam tempora nemo sit numquam praesentium ut, rerum impedit quasi, sequi nisi sed cum harum. Explicabo porro, quae magnam asperiores delectus nemo?
+        </p>
+
+        <!-- Lists -->
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+            <li>List item 5</li>
+        </ul>
+
+        <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+            <li>List item 5</li>
+        </ol>
+
+        <!-- table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        ally
+                    </td>
+                    <td>
+                        Ally@you.com
+                    </td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>
+                        Brad
+                    </td>
+                    <td>
+                        Brad@bitch.com
+                    </td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>
+                        Tod
+                    </td>
+                    <td>
+                        tod@fuck.com
+                    </td>
+                    <td>35</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <hr>
+        <br>
+
+        <!-- Forms -->
+        <form action="process.php" method="POST">
+            <div>
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="Enter First Name">
+            </div>
+            <br>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName">
+            </div>
+            <br>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+            <br>
+
+            <div>
+                <label>Message</label>
+                <textarea name="message"></textarea>
+            </div>
+            <br>
+
+            <div>
+                <label>Gender</label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <label>Age : </label>
+                <input type="number" name="age" value="30">
+            </div>
+            <br>
+
+            <div>
+                <label>Birthday : </label>
+                <input type="date" name="birthday">
+            </div>
+            <br>
+            
+            <!-- type, name, actual text on the submit button -->
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        
+        <br>
+
+        <!-- Buttons -->
+        <button>Click me</button>
+        <!-- not doing anything unless we go <button click="someFunc"></button> -->
+
+        <br>
+
+        <!-- Image -->
+        <a href="images/surtr.jpg">
+            <img src="images/surtr.jpg" alt="My surtr photo" width="100">
+        </a>
+        
+        <!-- Quotations -->
+        <blockquote cite="http://bing.com">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque ipsum nobis, nihil vel perferendis accusantium nam vitae quo ad vero voluptas mollitia, sunt labore asperiores, molestias quidem accusamus corrupti?
+        </blockquote>
+
+        <p>The <abbr title="World Wide Web">WWW</abbr> is great.</p>
+
+        <p>
+            <cite>HTML Crash Course</cite> by Brad Traversy.
         </p>
     </body>  
 </html>
