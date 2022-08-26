@@ -27,6 +27,24 @@ body{
     margin:0;
 }
 
+a{
+    text-decoration: none;  /* get rid of underline */
+    /* color: darkgreen; */
+    color:#000;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: green;
+}
+
+a:visited{
+    color: black;
+}
+
 .container{
     /* width: 960px; */
     width : 80%;
@@ -80,4 +98,77 @@ body{
     border: 1px #ccc solid;
     padding: 10px;
     border-radius: 15px;
+}
+
+.categories h2{
+    text-align: center;
+}
+
+.categories ul{
+    padding: 0;
+    list-style: square;
+}
+
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #333;
+    /* list-style-image: url(../images/check.jpg); */ /*need resize*/
+}
+
+.my-form{
+    padding: 20px;
+}
+
+.my-form .form-group{
+    padding-bottom: 15px;
+}
+
+.my-form label{
+    display: block;
+}
+
+.my-form input[type="text"], .my-form textarea{
+    padding: 8px;
+    width: 100%;
+} 
+
+/* .my-form input[type="submit"]{ */
+.buttom{
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+}
+
+.buttom:hover{
+    background: red;
+    color: #fff;
+}
+
+.block{
+    float: left;
+    width: 33.3%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.clr{
+    clear: both;
+}
+
+#main-block{
+    float: left;
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    background-color: #333;
+    color:#fff;
+    padding: 15px;
+    box-sizing: border-box;
 }
