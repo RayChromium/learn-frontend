@@ -143,3 +143,20 @@ const todoCompletedText = todos.filter(function(todo){
     return todo.text;
 });
 console.log(todoCompletedText);
+
+const x = '10';
+// if we say : " const x = '10' ", then we still get  x is 10
+if(x == 10)
+{
+    console.log("x is 10");
+}
+
+// so we should probably always use ===
+if(x === 10)
+{
+    console.log(" x === 10 ");
+}
+else
+{
+    console.log(" x doesn't === 10 ");
+}
