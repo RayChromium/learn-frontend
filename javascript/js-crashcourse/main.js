@@ -171,3 +171,22 @@ function addNums( num1, num2 )
 const addNumsArrow = (num1, num2) => num1+num2;
 
 addNums(5,4);
+
+// objects
+// 1. construct function ( not the best way )
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date( dob );
+    this.getBirthYear = function() {
+        return this.dob.getFullYear();
+    };
+    this.getFullName = () => {
+        return `${this.firstName} ${this.lastName}`;
+    };
+}
+// instantiate an object
+const person1 = new Person("Joe", "Doe", '4/3/1980');
+console.log(person1);
+console.log(person1.getBirthYear());
+console.log(person1.getFullName());
