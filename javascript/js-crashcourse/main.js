@@ -174,26 +174,45 @@ addNums(5,4);
 
 // objects
 // 1. construct function ( not the best way )
-function Person(firstName, lastName, dob){
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.dob = new Date( dob );
-    // put these functions in prototype
-    // this.getBirthYear = function() {
-    //     return this.dob.getFullYear();
-    // };
-    // this.getFullName = () => {
-    //     return `${this.firstName} ${this.lastName}`;
-    // };
+// function Person(firstName, lastName, dob){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date( dob );
+//     // put these functions in prototype
+//     // this.getBirthYear = function() {
+//     //     return this.dob.getFullYear();
+//     // };
+//     // this.getFullName = () => {
+//     //     return `${this.firstName} ${this.lastName}`;
+//     // };
+// }
+
+// Person.prototype.getBirthYear = function(){
+//     return this.dob.getFullYear();
+// };
+
+// Person.prototype.getFullName = () => {
+//     return `${this.firstName} ${this.lastName}`;
+// };
+
+// 2. class , does the same thing as above
+class Person
+{
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date( dob );
+    }
+
+    getBirthYear() {
+        return this.dob.getFullYear();
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    
 }
-
-Person.prototype.getBirthYear = function(){
-    return this.dob.getFullYear();
-};
-
-Person.prototype.getFullName = () => {
-    return `${this.firstName} ${this.lastName}`;
-};
 
 // instantiate an object
 const person1 = new Person("Joe", "Doe", '4/3/1980');
