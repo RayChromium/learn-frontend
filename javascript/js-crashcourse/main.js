@@ -219,3 +219,15 @@ const person1 = new Person("Joe", "Doe", '4/3/1980');
 console.log(person1);
 console.log(person1.getBirthYear());
 console.log(person1.getFullName());
+
+// DOM basics:
+// single element : 
+// console.log(document.getElementById('my-form'));
+const form = document.getElementById('my-form');
+console.log(form);
+console.log(document.querySelector('.container'));
+// select the first one tag
+console.log(document.querySelector('h1'));
+
+// multiple elements
+console.log(document.querySelectorAll('.item'));
