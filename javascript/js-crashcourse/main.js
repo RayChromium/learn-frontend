@@ -244,4 +244,12 @@ ul.children[1].innerText = 'Brad';
 ul.lastElementChild.innerHTML = '<h4>Hello</h4>';
 
 const btn = document.querySelector('.btn');
-btn.style.background = 'red';
+// btn.style.background = 'red';
+
+btn.addEventListener('click', (e)=>{
+    e.preventDefault(); // do not submit and jump right away
+    console.log(e);
+    console.log(e.target);
+    console.log(e.target.className);
+    console.log('Click!');
+} );
