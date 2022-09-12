@@ -246,10 +246,16 @@ ul.lastElementChild.innerHTML = '<h4>Hello</h4>';
 const btn = document.querySelector('.btn');
 // btn.style.background = 'red';
 
-btn.addEventListener('click', (e)=>{
+// btn.addEventListener('click', (e)=>{
+// btn.addEventListener('mouseover', (e)=>{
+btn.addEventListener('mouseout', (e)=>{
+
     e.preventDefault(); // do not submit and jump right away
-    console.log(e);
-    console.log(e.target);
-    console.log(e.target.className);
+    // console.log(e);
+    // console.log(e.target);
+    // console.log(e.target.className);
     console.log('Click!');
+    document.querySelector('#my-form').style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hey boy</h1>';
 } );
