@@ -223,11 +223,25 @@ console.log(person1.getFullName());
 // DOM basics:
 // single element : 
 // console.log(document.getElementById('my-form'));
-const form = document.getElementById('my-form');
+const form = document.getElementById('my-form');  // old way
 console.log(form);
-console.log(document.querySelector('.container'));
+console.log(document.querySelector('.container'));  // preffered way
 // select the first one tag
 console.log(document.querySelector('h1'));
 
 // multiple elements
-console.log(document.querySelectorAll('.item'));
+const items = document.querySelectorAll('.item');
+console.log(items); // preffered way, returns a NodeList, could use array methods
+items.forEach((item) => console.log(item));
+// console.log(document.getElementsByClassName('item')); //old way
+// console.log(document.getElementsByTagName('li'));
+
+const ul = document.querySelector('.items');
+// ul.remove();
+// ul.lastElementChild.remove();
+ul.firstElementChild.textContent = 'hello!';
+ul.children[1].innerText = 'Brad';
+ul.lastElementChild.innerHTML = '<h4>Hello</h4>';
+
+const btn = document.querySelector('.btn');
+btn.style.background = 'red';
