@@ -12,12 +12,21 @@ ul{
     padding: 0;
 }
 
-/* Global */
 .container{
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
+
+.button_1{
+    height:38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+/* Global */
 
 header{
     background: #35424a;
@@ -82,3 +91,24 @@ header a:hover{
 #showcase p{
     font-size: 20px;
 }
+
+#newsletter{
+    padding: 15px;
+    background-color: #35424a;
+    color: #ffffff;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width:  250px;
+} 
