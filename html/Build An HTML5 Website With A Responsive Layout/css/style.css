@@ -92,6 +92,7 @@ header a:hover{
     font-size: 20px;
 }
 
+/* newsletter */
 #newsletter{
     padding: 15px;
     background-color: #35424a;
@@ -112,3 +113,19 @@ header a:hover{
     height: 25px;
     width:  250px;
 } 
+
+/* boxes */
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+#boxes .box img{
+    width: 90px;
+}
