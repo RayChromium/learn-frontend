@@ -14,11 +14,24 @@
 // console.log(document.links);
 
 // Selectors
-// getElementById
-const headerTitle = document.getElementById('header-title');
-const header = document.getElementById('main-header');
-// console.log(headerTitle);
-// headerTitle.textContent = 'Hey man';
-// headerTitle.innerText = 'goodbye'   // cares about style
-// headerTitle.innerHTML = '<h3>Hello</h3>'
-header.style.borderBottom = 'solid 3px #000'
+// // getElementById
+// const headerTitle = document.getElementById('header-title');
+// const header = document.getElementById('main-header');
+// // console.log(headerTitle);
+// // headerTitle.textContent = 'Hey man';
+// // headerTitle.innerText = 'goodbye'   // cares about style
+// // headerTitle.innerHTML = '<h3>Hello</h3>'
+// header.style.borderBottom = 'solid 3px #000'
+
+// // getElementsByClassname
+// const items = document.getElementsByClassName('list-group-item');
+// console.log(items);
+// console.log(items[1]);
+// items[1].textContent = 'Hello too';
+// items[1].style.fontWeight = 'bold';
+// items[1].style.backgroundColor = 'yellow';
+
+// for(let i = 0; i < items.length; ++i)
+// {
+//     items[i].style.backgroundColor = '#f4f4f4';
+// }
