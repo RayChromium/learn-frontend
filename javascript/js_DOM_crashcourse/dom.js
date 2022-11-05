@@ -48,3 +48,25 @@
 // {
 //     li[i].style.backgroundColor = '#f4f4f4';
 // }
+
+// // querySelector
+// // only grabs the first one
+// const header = document.querySelector('#main-header');
+// header.style.borderBottom = 'solid 4px #ccc';
+
+// const input = document.querySelector('input');
+// input.value = 'Hello World';
+
+// const submit = document.querySelector('input[type="submit"]');
+// submit.value = 'send';
+
+// const item = document.querySelector('.list-group-item');
+// item.style.color = 'red'; // only change the first one
+
+// const lastItem = document.querySelector('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
+
+// const secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.color = 'coral';
+
+//queryselectorall
