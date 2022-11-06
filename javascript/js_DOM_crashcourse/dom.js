@@ -82,3 +82,45 @@
 //     odd[i].style.backgroundColor = '#f4f4f4';
 //     even[i].style.backgroundColor = '#ccc';
 // }
+
+// traversing the DOM
+const itemList = document.querySelector('#items');
+// parent node property
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode);
+
+// parentElement property
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement);
+
+// childnodes
+// console.log(itemList.childNodes); // contains all the ws, so pain in the ass
+// children
+// console.log(itemList.children);
+// console.log( itemList.children[1] );
+// itemList.children[1].style.backgroundColor = 'yellow';
+
+// // firstChild: bad
+// console.log(itemList.firstChild);  // doesn't give the first list-group-item, gives the text node
+// // firstElementChild: good
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'hello 1';
+// // lastChild: bad
+// console.log(itemList.lastChild);  // doesn't give the first list-group-item, gives the text node
+// // lastElementChild: good
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'hello last';
+
+// // nextSibling: bad
+// console.log(itemList.nextSibling);
+// // nextElementSibling: good
+// console.log(itemList.nextElementSibling)
+
+// // previousSibling: bad
+// console.log(itemList.previousSibling);
+// // previousElementSibling: good
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green';
+
