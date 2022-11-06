@@ -69,4 +69,16 @@
 // const secondItem = document.querySelector('.list-group-item:nth-child(2)');
 // secondItem.style.color = 'coral';
 
-//queryselectorall
+// //queryselectorall
+// const titles = document.querySelectorAll('.title')
+// console.log(titles);
+
+// titles[0].textContent = 'Hello';
+
+// const odd = document.querySelectorAll('li:nth-child(odd)');
+// const even = document.querySelectorAll('li:nth-child(even)');
+// for(let i = 0; i < odd.length; ++i)
+// {
+//     odd[i].style.backgroundColor = '#f4f4f4';
+//     even[i].style.backgroundColor = '#ccc';
+// }
