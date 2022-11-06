@@ -124,3 +124,25 @@ const itemList = document.querySelector('#items');
 // console.log(itemList.previousElementSibling);
 // itemList.previousElementSibling.style.color = 'green';
 
+// createElement
+// Create a div
+const newDiv = document.createElement('div');
+// add class
+newDiv.className = 'hello';
+// add id
+newDiv.id = 'hello1';
+// add attribute
+newDiv.setAttribute('title', 'Hello Div');
+// create a text node
+const newDivText = document.createTextNode('Hello new div');
+// add text to div
+newDiv.appendChild(newDivText);
+
+const container = document.querySelector('header .container');
+const h1 = document.querySelector('header h1');
+
+container.insertBefore(newDiv, h1);
+
+newDiv.style.fontSize = '30px';
+
+console.log(newDiv);
