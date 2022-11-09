@@ -178,27 +178,53 @@ const itemList = document.querySelector('#items');
 //     // console.log(e.shiftKey);
 // }
 
-const button = document.getElementById('button');
+// const button = document.getElementById('button');
 
-button.addEventListener('click', runEvent);
-button.addEventListener('dbclick', runEvent);
-button.addEventListener('mousedown', runEvent);
-button.addEventListener('mouseup', runEvent);
+// button.addEventListener('click', runEvent);
+// button.addEventListener('dbclick', runEvent);
+// button.addEventListener('mousedown', runEvent);
+// button.addEventListener('mouseup', runEvent);
+
+// const box = document.getElementById('box');
+// // fires only on parent
+// box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+
+// // fires on every child
+// box.addEventListener('mouseover', runEvent);
+// box.addEventListener('mouseout', runEvent);
+
+// box.addEventListener('mousemove', runEvent);
+
+const itemInput = document.querySelector('input[type="text"]');
+const form = document.querySelector('form');
+const select = document.querySelector('select');
+
+// itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('keyup', runEvent);
+// itemInput.addEventListener('keypress', runEvent);
+
+// itemInput.addEventListener('focus', runEvent);
+// itemInput.addEventListener('blur', runEvent);
+
+// itemInput.addEventListener('cut', runEvent);
+// itemInput.addEventListener('paste', runEvent);
+
+// // all keyboard events are the 'input'
+// itemInput.addEventListener('input', runEvent);
+
+// select.addEventListener('change',runEvent);
+// select.addEventListener('input',runEvent);
+
+form.addEventListener('submit', runEvent);
 
 function runEvent(e){
+    e.preventDefault();
     console.log(`Event Type : ${e.type}`);
-    output.innerHTML = `<h3> X : ${e.clientX}, Y : ${e.clientY}</h3>`;
-    // box.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
-    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+    console.log(e.target.value);
+    // document.getElementById('output').innerHTML=`<h3>${e.target.value}</h3>`;
+    // output.innerHTML = `<h3> X : ${e.clientX}, Y : ${e.clientY}</h3>`;
+    // // box.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+    // document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
 }
 
-const box = document.getElementById('box');
-// fires only on parent
-box.addEventListener('mouseenter', runEvent);
-box.addEventListener('mouseleave', runEvent);
-
-// fires on every child
-box.addEventListener('mouseover', runEvent);
-box.addEventListener('mouseout', runEvent);
-
-box.addEventListener('mousemove', runEvent);
