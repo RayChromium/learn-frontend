@@ -124,25 +124,56 @@ const itemList = document.querySelector('#items');
 // console.log(itemList.previousElementSibling);
 // itemList.previousElementSibling.style.color = 'green';
 
-// createElement
-// Create a div
-const newDiv = document.createElement('div');
-// add class
-newDiv.className = 'hello';
-// add id
-newDiv.id = 'hello1';
-// add attribute
-newDiv.setAttribute('title', 'Hello Div');
-// create a text node
-const newDivText = document.createTextNode('Hello new div');
-// add text to div
-newDiv.appendChild(newDivText);
+// // createElement
+// // Create a div
+// const newDiv = document.createElement('div');
+// // add class
+// newDiv.className = 'hello';
+// // add id
+// newDiv.id = 'hello1';
+// // add attribute
+// newDiv.setAttribute('title', 'Hello Div');
+// // create a text node
+// const newDivText = document.createTextNode('Hello new div');
+// // add text to div
+// newDiv.appendChild(newDivText);
 
-const container = document.querySelector('header .container');
-const h1 = document.querySelector('header h1');
+// const container = document.querySelector('header .container');
+// const h1 = document.querySelector('header h1');
 
-container.insertBefore(newDiv, h1);
+// container.insertBefore(newDiv, h1);
 
-newDiv.style.fontSize = '30px';
+// newDiv.style.fontSize = '30px';
 
-console.log(newDiv);
+// console.log(newDiv);
+
+
+// // Events
+// // const button = document.getElementById('button').addEventListener('click', ()=>console.log('123'));
+// const button = document.getElementById('button').addEventListener('click', buttonClicked);
+// function buttonClicked(e){
+//     // document.getElementById('header-title').textContent = 'Changed!';
+//     // document.querySelector('#main').style.backgroundColor = '#f4f4f4';
+//     // console.log(e);
+//     // console.log(e.target);
+//     // console.log(e.target.id);
+//     // console.log(e.target.className);
+//     // console.log(e.target.classList);
+//     // const output = document.getElementById('output');
+//     // output.innerHTML = '<h3>'+e.target.id+'</h3>';
+//     // console.log(e.type);
+
+//     // relative to the window
+//     // console.log(e.clientX);
+//     // console.log(e.clientY);
+
+//     // relative to element
+//     // console.log(e.offsetX);
+//     // console.log(e.offsetY);
+
+//     // // are you pressing the alt key when the event happens?
+//     // console.log(e.altKey);
+//     // // are you pressing the ctrl key when the event happens?
+//     // console.log(e.ctrlKey);
+//     // console.log(e.shiftKey);
+// }
