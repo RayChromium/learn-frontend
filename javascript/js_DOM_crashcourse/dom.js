@@ -148,8 +148,8 @@ const itemList = document.querySelector('#items');
 // console.log(newDiv);
 
 
-// // Events
-// // const button = document.getElementById('button').addEventListener('click', ()=>console.log('123'));
+// Events
+// const button = document.getElementById('button').addEventListener('click', ()=>console.log('123'));
 // const button = document.getElementById('button').addEventListener('click', buttonClicked);
 // function buttonClicked(e){
 //     // document.getElementById('header-title').textContent = 'Changed!';
@@ -177,3 +177,28 @@ const itemList = document.querySelector('#items');
 //     // console.log(e.ctrlKey);
 //     // console.log(e.shiftKey);
 // }
+
+const button = document.getElementById('button');
+
+button.addEventListener('click', runEvent);
+button.addEventListener('dbclick', runEvent);
+button.addEventListener('mousedown', runEvent);
+button.addEventListener('mouseup', runEvent);
+
+function runEvent(e){
+    console.log(`Event Type : ${e.type}`);
+    output.innerHTML = `<h3> X : ${e.clientX}, Y : ${e.clientY}</h3>`;
+    // box.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+}
+
+const box = document.getElementById('box');
+// fires only on parent
+box.addEventListener('mouseenter', runEvent);
+box.addEventListener('mouseleave', runEvent);
+
+// fires on every child
+box.addEventListener('mouseover', runEvent);
+box.addEventListener('mouseout', runEvent);
+
+box.addEventListener('mousemove', runEvent);
