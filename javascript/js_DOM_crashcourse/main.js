@@ -3,6 +3,8 @@ const itemList = document.getElementById('items');
 
 // add listener to form
 form.addEventListener('submit',addItem);
+// delete event
+itemList.addEventListener('click', removeItem);
 
 function addItem(e){
     e.preventDefault();         // prevent normal submit action
@@ -26,4 +28,15 @@ function addItem(e){
     li.appendChild(deleteButton);
     // append li to list
     itemList.appendChild(li);
+}
+
+// remove item,
+function removeItem(e){
+    // only do delete when press the delete button
+    if(e.target.classList.contains('delete')){
+        if(confirm('Are you sure you want to delete it?')){
+            const li = e.target.parentElement;
+            itemList.removeChild(li);
+        }
+    }
 }
