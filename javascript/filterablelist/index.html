@@ -61,5 +61,16 @@
             </li>
         </ul>
     </div>
+
+    <script>
+        const filterInput = document.getElementById('filterInput');
+        // get input element
+        addEventListener("keyup", (e)=>{
+            // get value of input
+            const filterValue = filterInput.value.toUpperCase();
+            console.log(filterValue);
+        });
+    </script>
+
 </body>
 </html>
