@@ -146,6 +146,18 @@ img {
     color: #fff;
 }
 
+/* Hide Content Initially */
+#tab-content-1 ,
+#tab-content-2 ,
+#tab-content-3 {
+    display: none;
+} 
+
+.show {
+    /* make sure it always works, takes precedence */
+    display: block !important;
+}
+
 #tab-content-1 .tab-1-content-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
