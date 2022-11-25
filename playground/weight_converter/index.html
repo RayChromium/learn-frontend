@@ -60,8 +60,11 @@
 
     <script>
         document.getElementById('lbsInput').addEventListener('input', (e)=>{
-            let pounds = e.target.value;
-            console.log(pounds);
+            // e.preventDefault();
+            let lbs = e.target.value;
+            document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+            document.getElementById('kgOutput').innerHTML = lbs/2.2046;
+            document.getElementById('ouncesOutput').innerHTML = lbs*16;
         })
     </script>
 </body>
