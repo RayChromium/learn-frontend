@@ -53,6 +53,23 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // console.log(companies);
 
 // map
+
+// create array of company names
+// const companyNames = companies.map(function(company) {
+//   return company.name;
+// });
+
+// const companyNames = companies.map(company => company.name);
+// console.log(companyNames);
+
+// const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+// console.log(testMap);
+
+// // chained map:
+// const ageMap = ages.map(age => age * 2)
+//                    .map(age => age * 3);
+// console.log(ageMap);
+
 // sort
 // reduce
 
