@@ -89,5 +89,28 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // const sortedAges = ages.sort((a,b) => a-b);
 // console.log(`sortedAges : ${sortedAges}`);
 // console.log(`ages mutated : ${ages}`);
-// reduce
 
+
+// reduce
+// sum sth up
+// let ageSum = 0;
+// for( let  i = 0; i < ages.length; ++i ) { 
+//   ageSum += ages[i];
+// }
+
+// const ageSum = ages.reduce(function(total, age){
+//   return total + age;
+// },0);
+
+const ageSum = ages.reduce((total, age) => total + age,0);
+
+console.log(ageSum);
+
+//get total yeas of all companies
+// const companiesYears = companies.reduce(function(total, company){
+//   return total + (company.end - company.start);
+// }, 0);
+
+const companiesYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
+
+console.log(companiesYears);
