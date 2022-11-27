@@ -71,5 +71,23 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // console.log(ageMap);
 
 // sort
+// get a sorted companies list by start date:
+// const sortedComapnies = companies.sort(function(c1, c2
+//   ){
+//   if( c1.start > c2.start ){
+//     return 1;
+//   } else {
+//     return -1
+//   }
+// });
+
+// const sortedComapnies = companies.sort((c1,c2) => (c1.start > c2.start ? 1 : -1));
+// console.log(sortedComapnies);
+
+// // sort ages, mutates the original arrat
+// console.log(`ages original : ${ages}`);
+// const sortedAges = ages.sort((a,b) => a-b);
+// console.log(`sortedAges : ${sortedAges}`);
+// console.log(`ages mutated : ${ages}`);
 // reduce
 
