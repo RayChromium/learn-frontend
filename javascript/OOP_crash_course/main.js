@@ -32,15 +32,39 @@
 // console.log(Object.keys(book1));
 
 // constructors:
-function Book(title, author, year) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    this.getSumary = function(){ return `${this.title}, written by ${this.author} in ${this.year}`;};
-}
-// instantiate an obj from a ctor
-const book1 = new Book('book 1', 'John Doe', '2013');
-const book2 = new Book('book 2','Jane Doe', '2016' );
-console.log(book1);  // Object {} stuff
-console.log(book1.title);
-console.log(book2.getSumary());
+// function Book(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+//     this.getSumary = function(){ return `${this.title}, written by ${this.author} in ${this.year}`;};
+// }
+// // instantiate an obj from a ctor
+// const book1 = new Book('book 1', 'John Doe', '2013');
+// const book2 = new Book('book 2','Jane Doe', '2016' );
+// console.log(book1);  // Object {} stuff
+// console.log(book1.title);
+// console.log(book2.getSumary());
+
+// Prototypes
+// function Book(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+// }
+// // add function to prototype
+// Book.prototype.getSumary = function(){ return `${this.title}, written by ${this.author} in ${this.year}`;}
+// Book.prototype.getAge = function(){ 
+//     const years = new Date().getFullYear() - this.year;
+//     return `${this.title} is ${years} years old`;
+// }
+// Book.prototype.revise = function(newYear) { this.year = newYear; this.revsed = true; }
+// // instantiate an obj from a ctor
+// const book1 = new Book('book 1', 'John Doe', '2013');
+// const book2 = new Book('book 2','Jane Doe', '2016' );
+// console.log(book1);  // Object {} stuff
+// console.log(book1.title);
+// console.log(book2.getSumary());
+// console.log(book2.getAge());
+// console.log(book2);
+// book2.revise('2018');
+// console.log(book2);
