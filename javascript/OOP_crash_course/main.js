@@ -68,3 +68,29 @@
 // console.log(book2);
 // book2.revise('2018');
 // console.log(book2);
+
+// inheritence
+// function Book(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+// }
+// // add function to prototype
+// Book.prototype.getSumary = function(){ return `${this.title}, written by ${this.author} in ${this.year}`;}
+
+// // inherite book
+// function Magazine(title, author, year, month) {
+//     Book.call(this, title, author, year );
+//     this.month = month
+// }
+
+// // inherite the prototype of Book:
+// Magazine.prototype = Object.create(Book.prototype);
+// // Use Magazine ctor
+// Magazine.prototype.constructor = Magazine;
+
+// // instantiate magazine obj
+// const mag1 = new Magazine('Mag one', 'John Doe', '2019', 'Jan');
+
+// console.log(mag1);
+// console.log(mag1.getSumary());
