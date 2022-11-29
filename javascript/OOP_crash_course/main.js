@@ -94,3 +94,26 @@
 
 // console.log(mag1);
 // console.log(mag1.getSumary());
+
+// Object of protos
+const bookProtos = {
+    getSumary : function(){ return `${this.title}, written by ${this.author} in ${this.year}`;},
+    getAge : function(){ 
+            const years = new Date().getFullYear() - this.year;
+            return `${this.title} is ${years} years old`;
+        }
+}
+
+// create object : 
+// const book1 = Object.create(bookProtos);
+// book1.title = 'book 1';
+// book1.author = 'John Doe';
+// book1.year = '2016';
+
+// const book1 = Object.create(bookProtos, {
+//     title : {value : 'book 1'},
+//     author : {value : 'John Doe'},
+//     year : {value : '2016'}
+// });
+
+// console.log(book1);
