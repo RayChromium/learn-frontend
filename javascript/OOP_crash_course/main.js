@@ -96,13 +96,13 @@
 // console.log(mag1.getSumary());
 
 // Object of protos
-const bookProtos = {
-    getSumary : function(){ return `${this.title}, written by ${this.author} in ${this.year}`;},
-    getAge : function(){ 
-            const years = new Date().getFullYear() - this.year;
-            return `${this.title} is ${years} years old`;
-        }
-}
+// const bookProtos = {
+//     getSumary : function(){ return `${this.title}, written by ${this.author} in ${this.year}`;},
+//     getAge : function(){ 
+//             const years = new Date().getFullYear() - this.year;
+//             return `${this.title} is ${years} years old`;
+//         }
+// }
 
 // create object : 
 // const book1 = Object.create(bookProtos);
@@ -117,3 +117,42 @@ const bookProtos = {
 // });
 
 // console.log(book1);
+
+
+
+// ES6 class syntax : 
+class Book {
+    constructor(title, author, year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+    getSumary() { 
+        return `${this.title}, written by ${this.author} in ${this.year}`;
+    }
+
+    getAge() {
+        const years = new Date().getFullYear() - this.year;
+        return `${this.title} is ${years} years old`;
+    }
+
+    revise(newYear) { 
+        this.year = newYear; 
+        this.revsed = true; 
+    }
+
+    static topBookStore() {
+        return 'Barns & Noble';
+    }
+}
+
+// Instantiate an object:
+const book1 = new Book('book 1', 'John Doe', '2017');
+console.log(book1);
+book1.revise('2018');
+console.log(book1);
+
+// Need class name to run static functions: 
+// console.log(book1.topBookStore());  // uncaught error : topBookStore is not a function
+console.log(Book.topBookStore());  // OK
