@@ -148,11 +148,24 @@ class Book {
 }
 
 // Instantiate an object:
-const book1 = new Book('book 1', 'John Doe', '2017');
-console.log(book1);
-book1.revise('2018');
-console.log(book1);
+// const book1 = new Book('book 1', 'John Doe', '2017');
+// console.log(book1);
+// book1.revise('2018');
+// console.log(book1);
 
 // Need class name to run static functions: 
 // console.log(book1.topBookStore());  // uncaught error : topBookStore is not a function
-console.log(Book.topBookStore());  // OK
+// console.log(Book.topBookStore());  // OK
+
+// Magazine subclass : 
+class Magazine extends Book {
+    constructor(title, author, year, month) {
+        super(title, author, year);
+        this.month = month;
+    }
+}
+
+// Instantiate Magazine objects : 
+const mag1 = new Magazine('Mag one', 'Jay Chou' , '2019', 'Dec');
+console.log(mag1);
+console.log(mag1.getSumary());
