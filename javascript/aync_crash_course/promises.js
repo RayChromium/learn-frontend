@@ -34,16 +34,38 @@ function creatPost(post) {
 }
 
 // creatPost( { title : 'Post Three' , body : 'This is Post Three' } ).then(()=>console.log('promise action'));
-creatPost( { title : 'Post Three' , body : 'This is Post Three' } ).then(getPosts).catch(err=>console.log(err));
+// creatPost( { title : 'Post Three' , body : 'This is Post Three' } ).then(getPosts).catch(err=>console.log(err));
 
-// Promise.all
-// .then() after a Promise.all([] : list of promises) will register a callback when all promises in the list resolves
-const promise1 = Promise.resolve('hello!'); // create a resolved promise
-const promise2 = 10;
-const promise3 = new Promise((resolve, reject)=>{
-    setTimeout(resolve, 2000, 'Goodbye');
-})
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then( res => res.json() );
+// async / await
 
-Promise.all([promise1, promise2, promise3, promise4])
-.then(values => console.log(values));
+async function init() {
+
+    // the function after await returns a promise, 
+    // what comes after the await is actions we want to take in 'resolve'
+    await creatPost( { title : 'Post Three' , body : 'This is Post Three' } );
+
+    getPosts();
+}
+
+init();
+
+async function fetchUsers() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    console.log(data);
+}
+
+fetchUsers();
+
+
+// // Promise.all
+// // .then() after a Promise.all([] : list of promises) will register a callback when all promises in the list resolves
+// const promise1 = Promise.resolve('hello!'); // create a resolved promise
+// const promise2 = 10;
+// const promise3 = new Promise((resolve, reject)=>{
+//     setTimeout(resolve, 2000, 'Goodbye');
+// })
+// const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then( res => res.json() );
+
+// Promise.all([promise1, promise2, promise3, promise4])
+// .then(values => console.log(values));
