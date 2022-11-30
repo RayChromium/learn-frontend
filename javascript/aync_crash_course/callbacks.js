@@ -13,4 +13,12 @@ function getPosts() {
     } ,1000 );
 }
 
-getPosts();
+function creatPost(post, callback) {
+    setTimeout(()=>{
+        posts.push(post);
+        callback();
+    },2000);
+}
+
+
+creatPost( { title : 'Post Three' , body : 'This is Post Three' } , getPosts );
