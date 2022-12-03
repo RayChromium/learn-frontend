@@ -77,6 +77,15 @@ ul {
     opacity: 0.9;
 }
 
+.dark {
+    color: #fff;
+}
+
+.dark .btn {
+    background: #f4f4f4;
+    color: #333;
+}
+
 /* showcase */
 .showcase {
     width: 100%;
@@ -141,6 +150,18 @@ ul {
     padding: 50px 0 0 30px;
 }
 
-.xbox p {
+.xbox p, .carbon p {
     margin: 10px 0 20px;
+}
+
+.carbon {
+    height: 350px;
+    width: 100%;
+    background: url('img/carbon.jpg') no-repeat center center/cover;
+    margin-bottom: 20px;
+}
+
+.carbon .content {
+    width: 55%;
+    padding: 100px 0 0 30px;
 }
