@@ -34,6 +34,10 @@
                 }
             }
 
+            xhr.onerror = () => {
+                console.log('request error');
+            }
+
             // xhr.onreadystatechange = () => {
             //     console.log(xhr.readyState);
             //     if( xhr.readyState == 4 && xhr.status == 200 ) {
