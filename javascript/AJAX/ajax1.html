@@ -10,6 +10,10 @@
     <button id="button">
         Get Text File
     </button>
+    <br><br><br>
+    <div id="text">
+
+    </div>
 
     <script>
         // Create a event listener :
@@ -31,6 +35,11 @@
                 if(xhr.status == 200)  // if(xhr.status == 200)
                 {
                     console.log(xhr.responseText);
+                    document.getElementById('text').innerHTML = xhr.responseText;
+                }
+                else if(xhr.status == 404)
+                {
+                    document.getElementById('text').innerHTML = 'Not Found';
                 }
             }
 
