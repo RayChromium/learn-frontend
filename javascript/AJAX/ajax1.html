@@ -12,26 +12,48 @@
     </button>
 
     <script>
-        // Create a event listener : 
+        // Create a event listener :
         document.getElementById('button').addEventListener('click', () => {
             // console.log('button clicked');
             const xhr = new XMLHttpRequest();
             // xhr.open - method, url/file, async
             xhr.open('GET', 'sample.txt', true);
 
-            xhr.onload = function(){
-                if(this.status == 200)  // if(xhr.status == 200)
-                {
-                    console.log(this.resposeText);
-                }
+            console.log(xhr.readyState);
 
-                // HTTP Statuses : 
-                // 200 : ok
-                // 403 : Forbidden
-                // 404 : Not Found
+            // optional - use for loaders
+            xhr.onprogress = () => {
+                console.log(xhr.readyState);
             }
 
+            xhr.onload = function(){
+                console.log(xhr.readyState);
+                if(xhr.status == 200)  // if(xhr.status == 200)
+                {
+                    console.log(xhr.responseText);
+                }
+            }
+
+            // xhr.onreadystatechange = () => {
+            //     console.log(xhr.readyState);
+            //     if( xhr.readyState == 4 && xhr.status == 200 ) {
+            //         console.log(xhr.responseText);
+            //     }
+            // }
+
+            // Ready state values :
+            // 0 : request not initialized
+            // 1 : server connection established
+            // 2 : request received
+            // 3 : processing request
+            // 4 : request finished and response is ready
+
             xhr.send();
+
+            // HTTP Statuses :
+            // 200 : ok
+            // 403 : Forbidden
+            // 404 : Not Found
         });
     </script>
 </body>
