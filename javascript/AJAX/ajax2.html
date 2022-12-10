@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 2 - Local JSON</title>
+</head>
+<body>
+    <button id="button1">
+        Get User
+    </button>
+    <br><br><br>
+    <button id="button2">
+        Get Users
+    </button>
+    <br><br><br>
+    <h1>User</h1>
+    <div id="user">
+    </div>
+    <h1>Users</h1>
+    <div id="users">
+    </div>
+
+    <script>
+        // Create a event listener :
+        document.getElementById('button1').addEventListener('click', () => {
+            // console.log('button clicked');
+            const xhr = new XMLHttpRequest();
+            // xhr.open - method, url/file, async
+            xhr.open('GET', 'user.json', true);
+
+            xhr.onload = function(){
+                if(xhr.status == 200) 
+                {
+                    // document.getElementById('user').innerHTML = xhr.responseText;
+                    const user = JSON.parse(xhr.responseText);
+                    const output = document.getElementById('user');
+                    const ul = document.createElement('ul');
+                    const userId = document.createElement('li');
+                    userId.appendChild(document.createTextNode(user.id));
+                    const userName = document.createElement('li');
+                    userName.appendChild(document.createTextNode(user.name));
+                    const userEmail = document.createElement('li');
+                    userEmail.appendChild(document.createTextNode(user.email));
+                    ul.appendChild(userId);
+                    ul.appendChild(userName);
+                    ul.appendChild(userEmail);
+                    output.appendChild(ul);
+                }
+                // else if(xhr.status == 404)
+                // {
+                //     document.getElementById('user').innerHTML = 'Not Found';
+                // }
+            }
+
+            xhr.onerror = () => {
+                console.log('request error');
+            }
+
+            // xhr.onreadystatechange = () => {
+            //     console.log(xhr.readyState);
+            //     if( xhr.readyState == 4 && xhr.status == 200 ) {
+            //         console.log(xhr.responseText);
+            //     }
+            // }
+
+            // Ready state values :
+            // 0 : request not initialized
+            // 1 : server connection established
+            // 2 : request received
+            // 3 : processing request
+            // 4 : request finished and response is ready
+
+            xhr.send();
+
+            // HTTP Statuses :
+            // 200 : ok
+            // 403 : Forbidden
+            // 404 : Not Found
+        });
+
+        document.getElementById('button2').addEventListener('click', () => {
+            // console.log('button clicked');
+            const xhr = new XMLHttpRequest();
+            // xhr.open - method, url/file, async
+            xhr.open('GET', 'users.json', true);
+
+            xhr.onload = function(){
+                if(xhr.status == 200) 
+                {
+                    // document.getElementById('user').innerHTML = xhr.responseText;
+                    const users = JSON.parse(xhr.responseText);
+                    const output = document.getElementById('user');
+                    for(let i in users)
+                    {
+                        const ul = document.createElement('ul');
+                        const userId = document.createElement('li');
+                        userId.appendChild(document.createTextNode(users[i].id));
+                        const userName = document.createElement('li');
+                        userName.appendChild(document.createTextNode(users[i].name));
+                        const userEmail = document.createElement('li');
+                        userEmail.appendChild(document.createTextNode(users[i].email));
+                        ul.appendChild(userId);
+                        ul.appendChild(userName);
+                        ul.appendChild(userEmail);
+                        output.appendChild(ul);
+                    }
+                    
+                }
+                // else if(xhr.status == 404)
+                // {
+                //     document.getElementById('user').innerHTML = 'Not Found';
+                // }
+            }
+
+            xhr.onerror = () => {
+                console.log('request error');
+            }
+
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
