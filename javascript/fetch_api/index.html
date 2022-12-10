@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Sanbox</title>
+</head>
+<body>
+    <button id="getText">
+        Get Text
+    </button>
+
+    <script>
+        document.getElementById('getText').addEventListener('click', getText);
+
+        function getText(){
+            fetch('sample.txt')
+            .then(function(res){
+                console.log(res);
+                // console.log(res.text());     // res.text() : returns a promise
+                return res.text();
+            })
+            .then(function(data){
+                console.log(data);
+            })
+        }
+    </script>
+</body>
+</html>
