@@ -13,10 +13,33 @@ const searchStates = async searchText => {
     });
 
     if(searchStates.length === 0){
+        console.log('ok?');
         matches = [];
+        matchList.innerHTML = '';
+    }
+    else {
+        console.log("SHTF");
     }
 
-    console.log(matches);
+    console.log("matches : ", matches);
+    console.log("matchList.innerHTML : ", matchList.innerHTML);
+    console.log("searchText.length : ", searchText.length);
+    console.log("searchText : ", searchText);
+
+    outputHtml(matches);
 };
+
+// Show results to HTML
+const outputHtml = (matches) => {
+    if(matches.length > 0) {
+        const html = matches.map( match => `
+            <div class="card card-body mb-1">
+                <h4>${match.name} (${match.abbr}) <span class="text-primer">${match.capital}</span></h4>
+                <small>Lat: ${match.lat} Long: ${match.long}</small>
+            </div>
+        ` ).join('');
+        matchList.innerHTML = html;
+    }
+}
 
 search.addEventListener('input', () => searchStates(search.value));
