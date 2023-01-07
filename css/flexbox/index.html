@@ -7,25 +7,28 @@
     <title>Flexbox CSS Cheatsheet</title>
     <style>
 
-        .container-1 {
-            display: flex;
-            /* align-items: flex-start; */
-            /* align-items: flex-end; */
-            /* align-items: center; */
-            /*default : stretch*/
-            align-items: stretch;
-            /* flex-direction: column;  */
-        }
+        /* only do the flexing if screen width is larger than 468pxs */
+        @media(min-width : 468px) {
+            .container-1 {
+                display: flex;
+                /* align-items: flex-start; */
+                /* align-items: flex-end; */
+                /* align-items: center; */
+                /*default : stretch*/
+                align-items: stretch;
+                /* flex-direction: column;  */
+            }
 
-        .container-2 { 
-            display: flex;
-            /* default : flex-start */
-            /* justify-content: flex-start; */
-            /* justify-content: flex-end; */
-            /* justify-content: center; */
-            /* justify-content: space-around; */
-            /* justify-content: space-evenly; */
-            justify-content: space-between;
+            .container-2 { 
+                display: flex;
+                /* default : flex-start */
+                /* justify-content: flex-start; */
+                /* justify-content: flex-end; */
+                /* justify-content: center; */
+                /* justify-content: space-around; */
+                /* justify-content: space-evenly; */
+                justify-content: space-between;
+            }
         }
 
         .container-1 div, .container-2 div{
