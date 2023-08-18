@@ -149,3 +149,14 @@ class Employee extends Person {
 
 const emp = new Employee( 3, 'Shawn', 'nurse' );
 console.log(`calling method from base class: emp.register() returns: ${emp.register()}`);
+
+// Generics basics:
+function getArray<T> ( items: T[] ): T[] {
+    return new Array().concat(items);
+}
+
+let numArray = getArray( [1,2,3,4] ); // it's a number[]
+let strArray = getArray( ['Ray', 'Lao Shu'] ); // it's a string[]
+
+// numArray.push('dah') // error, can't push string to number[]\
+strArray.push('dah');  // ok
