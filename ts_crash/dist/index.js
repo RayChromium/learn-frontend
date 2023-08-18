@@ -74,3 +74,13 @@ const user1 = {
 ;
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
+// Classes: 
+class Person {
+    constructor(id, name) {
+        console.log('person instantiated');
+        this.id = id;
+        this.name = name;
+    }
+}
+const Ray = new Person(24, 'Ray');
+// Ray.id; // can't access
