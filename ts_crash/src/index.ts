@@ -22,3 +22,44 @@ employee = [
     [2, 'Laoshu'],
     [3, 'booboo']
  ]
+
+// Union
+let id_union: string | number = 22;
+id_union = '22';
+
+// enum
+enum Direction1  {
+    Up,
+    Down,
+    Left,
+    Right
+};
+
+enum Direction2  {
+    Up = 'Up',
+    Down = 'Down',
+    Left = 'Left',
+    Right = 'Right'
+};
+console.log( `Direction1 is: ${Direction1.Up}` ); // should be a number
+console.log( `Direction1 is: ${Direction2.Up}` ); // should be 'Up'
+
+// Objects
+type User = {
+    id: number,
+    name: string
+}
+
+// const user: { 
+//     id: number,
+//     name: string
+//  } = {
+//     id: 1,
+//     name: 'John'
+// }
+
+const user: User = {
+    id: 1,
+    name: 'John'
+}
+
