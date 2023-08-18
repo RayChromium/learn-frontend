@@ -63,3 +63,9 @@ const user: User = {
     name: 'John'
 }
 
+// Type assertion
+let cid: any = 1;
+const customerId = <number>cid;
+// customerId = true; // error
+const customerId2 = cid as string;
+

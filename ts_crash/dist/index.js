@@ -52,3 +52,8 @@ const user = {
     id: 1,
     name: 'John'
 };
+// Type assertion
+let cid = 1;
+const customerId = cid;
+// customerId = true; // error
+const customerId2 = cid;
