@@ -57,3 +57,13 @@ let cid = 1;
 const customerId = cid;
 // customerId = true; // error
 const customerId2 = cid;
+// functions
+function addNum(x, y) {
+    return x + y;
+}
+console.log(`addNum(3,4): ${addNum(3, 4)}`);
+function log(message) {
+    console.log(message);
+}
+log(`pass in string`);
+log(1111);

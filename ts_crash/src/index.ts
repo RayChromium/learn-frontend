@@ -69,3 +69,14 @@ const customerId = <number>cid;
 // customerId = true; // error
 const customerId2 = cid as string;
 
+// functions
+function addNum( x: number, y: number ) : number {
+    return x + y;
+}
+console.log(`addNum(3,4): ${addNum(3,4)}`);
+
+function log( message: string | number ): void {
+    console.log(message);
+}
+log(`pass in string`);
+log(1111);
