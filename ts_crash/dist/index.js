@@ -93,3 +93,11 @@ class Person {
 }
 const Ray = new Person(24, 'Ray');
 // Ray.id; // can't access
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name); // no need to write base class's ctor again
+        this.position = position;
+    }
+}
+const emp = new Employee(3, 'Shawn', 'nurse');
+console.log(`calling method from base class: emp.register() returns: ${emp.register()}`);
