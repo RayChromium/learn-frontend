@@ -71,4 +71,6 @@ const user1 = {
     id: 2,
     name: 'Dude'
 };
-// user1.id = 5; // error: can't assign readonly prop
+;
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;

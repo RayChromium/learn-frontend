@@ -94,3 +94,10 @@ const user1: UserInterface = {
 };
 
 // user1.id = 5; // error: can't assign readonly prop
+
+interface MathFunc {
+    ( x: number, y: number ) : number
+};
+
+const add: MathFunc = ( x:number, y:number ) : number =>  x + y
+const sub: MathFunc = ( x:number, y:number ) : number =>  x - y
