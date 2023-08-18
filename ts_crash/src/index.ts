@@ -102,6 +102,26 @@ interface MathFunc {
 const add: MathFunc = ( x:number, y:number ) : number =>  x + y
 const sub: MathFunc = ( x:number, y:number ) : number =>  x - y
 
+// classes with interface
+interface PersonInterface  {
+    id: number,
+    name: string,
+    register(): string
+}
+
+class PersonImpItf implements PersonInterface {
+    id: number;
+    name: string;
+    
+    constructor( id: number, name: string ) {
+        console.log('person instantiated');
+        this.id = id;
+        this.name = name;
+    }
+
+    register = () => 'register method';
+}
+
 // Classes: 
 class Person {
     private id: number;
@@ -112,6 +132,8 @@ class Person {
         this.id = id;
         this.name = name;
     }
+
+    register = () => 'register method';
 }
 const Ray = new Person( 24, 'Ray' );
 // Ray.id; // can't access

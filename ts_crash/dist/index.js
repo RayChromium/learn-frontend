@@ -74,9 +74,18 @@ const user1 = {
 ;
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
+class PersonImpItf {
+    constructor(id, name) {
+        this.register = () => 'register method';
+        console.log('person instantiated');
+        this.id = id;
+        this.name = name;
+    }
+}
 // Classes: 
 class Person {
     constructor(id, name) {
+        this.register = () => 'register method';
         console.log('person instantiated');
         this.id = id;
         this.name = name;
