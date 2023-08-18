@@ -67,3 +67,8 @@ function log(message) {
 }
 log(`pass in string`);
 log(1111);
+const user1 = {
+    id: 2,
+    name: 'Dude'
+};
+// user1.id = 5; // error: can't assign readonly prop

@@ -80,3 +80,17 @@ function log( message: string | number ): void {
 }
 log(`pass in string`);
 log(1111);
+
+// Interfaces:
+interface UserInterface  {
+    readonly id: number,
+    name: string,
+    age?: number   // optional
+}
+
+const user1: UserInterface = {
+    id: 2,
+    name: 'Dude'
+};
+
+// user1.id = 5; // error: can't assign readonly prop
