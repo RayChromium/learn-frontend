@@ -1,6 +1,7 @@
 import { Poppins } from 'next/font/google'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import Header from './components/Header'
+
 
 const popins = Poppins({
   weight: ['400', '700'],
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={popins.className}>
+        <Header />
         <main className='container'>
           {children}
         </main>
