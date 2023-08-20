@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import React from 'react'
 import Link from 'next/link'
 import Repo from '@/app/components/Repo'
@@ -7,8 +8,12 @@ const RepoPage = ( { params: {name} } ) => {
   return (
     <div className='card'>
         <Link href='/code/repos' className='btn btn-back'>Back to Repositories</Link>
-        <Repo name={name} />
-        <RepoDirs name={name}/>
+        <Suspense fallback={<div>Loading repo...</div>}>
+            <Repo name={name} />
+        </Suspense>
+        <Suspense fallback={<div>Loading RepoDir...</div>}>
+            <RepoDirs name={name}/>
+        </Suspense>
     </div>
   )
 }
