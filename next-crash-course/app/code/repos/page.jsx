@@ -3,6 +3,7 @@ import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
 import React from 'react'
 async function fetchRepos() { 
     const response = await fetch('https://api.github.com/users/raychromium/repos');
+    await new Promise( (resolve) => setTimeout(resolve, 1000) );// wait 1s 
     const repos = await response.json();
     return repos;
 }
