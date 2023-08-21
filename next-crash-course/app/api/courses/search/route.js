@@ -7,5 +7,5 @@ export async function GET( request ) {
     const filteredCourses = courses.filter( course => {
         return course.title.toLowerCase().includes(query.toLocaleLowerCase());
     } )
-    return NextResponse.json( courses );
+    return NextResponse.json( filteredCourses );
 }
