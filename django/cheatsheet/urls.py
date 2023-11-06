@@ -19,6 +19,7 @@ from django.urls import path
 from cheatsheet import views
 
 urlpatterns = [
+    path('', views.home),
     path('admin/', admin.site.urls),
     path( 'cheatsheet', views.cheatsheet ),
 ]
