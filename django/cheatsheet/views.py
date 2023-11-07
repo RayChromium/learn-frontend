@@ -9,3 +9,7 @@ def cheatsheet(request):
 
 def home(request):
     return HttpResponse("Homepage")
+
+def detail(request, id):
+    data = CheatsheetPage.objects.get(pk=id)
+    return render(request, 'cheatsheet/detail.html', {'cheatsheetpage': data})

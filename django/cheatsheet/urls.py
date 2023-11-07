@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.home),
     path('admin/', admin.site.urls),
     path( 'cheatsheet', views.cheatsheet ),
+    path( 'cheatsheet/<int:id>',views.detail ),
 ]
